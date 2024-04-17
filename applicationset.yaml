@@ -20,7 +20,7 @@ spec:
       source:
         repoURL: https://github.com/baldey-nz/argocd-test.git
         targetRevision: HEAD
-        path: demo/deployment
+        path: demo
       destination:
         # default cluster as destination, you can define multiple clusters in ArgoCD UI
         server: https://kubernetes.default.svc
