@@ -8,8 +8,8 @@ spec:
   - list:
       elements:
       - namespace: dev
-      - namespace: test
       - namespace: uat
+      - namespace: prod
   template:
     metadata:
       # will generate applications with different names for example (dev-color-app, test-color-app, etc..)
