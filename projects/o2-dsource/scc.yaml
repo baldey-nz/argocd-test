@@ -1,0 +1,22 @@
+apiVersion: security.openshift.io/v1
+kind: SecurityContextConstraints
+metadata:
+  name: o2-postgresql-scc
+  labels:
+    openshift-poc-operator: "true"
+allowPrivilegedContainer: false
+runAsUser:
+  type: MustRunAs
+  uid: 9795
+fsGroup:
+  type: MustRunAs
+  ranges:
+    - min: 9795
+      max: 9795
+seLinuxContext:
+  type: MustRunAs
+users:
+  - system:serviceaccount:o2-common-postgresql
+  - system:serviceaccount:o2-event-postgresql
+  - system:serviceaccount:o2-order-postgresql
+  
